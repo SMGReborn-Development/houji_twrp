@@ -52,3 +52,6 @@
 
 # Removable storage
 /usb_otg               auto    /dev/block/sdg1                            /dev/block/sdg4         flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
+
+# Removable storage
+/usbstorage     vfat    /dev/block/sdg1                                 /dev/block/sdg      flags=fsflags=utf8;display="USB-OTG";storage;wipeingui;removable
