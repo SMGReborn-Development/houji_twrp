@@ -25,7 +25,6 @@ Camera  | 50MP (main), 50MP (floating telephoto), 50MP (ultra-wide), 32MP (front
 
 ## Features
 Not works:
-- [ ] USB OTG
 - [ ] Decryption
 
 Works:
@@ -35,6 +34,7 @@ Works:
 - [X] Flashing
 - [X] MTP
 - [X] Sideload
+- [X] USB OTG
 - [X] Vibrator
 - [X] Mount /data
 
