@@ -56,9 +56,12 @@ on property:twrp.modules.loaded=true
     # Mount firmware
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
+    # Chmod /dev/st54spi_gpio
+    chmod 0777 /dev/st54spi_gpio
     # Load ADSP firmware for PMIC
     wait /sys/kernel/boot_adsp/boot
     write /sys/kernel/boot_adsp/boot 1
+    # This make USB-OTG work
     wait /sys/kernel/boot_adsp/ssr
     write /sys/kernel/boot_adsp/ssr 1
     wait /sys/class/power_supply/battery
@@ -72,8 +75,8 @@ on property:hwservicemanager.ready=true
 on property:vendor.sys.listeners.registered=true
     start vendor.gatekeeper_default
     start vendor.weaver_hal_service
-    start vendor.se_omapi
     start vendor.secure_element
+    start vendor.se_omapi
     start vendor.keymint-strongbox
     start vibratorfeature-hal-service
     start touch_report
