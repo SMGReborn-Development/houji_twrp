@@ -37,52 +37,56 @@
 #include <sys/_system_properties.h>
 
 using android::base::GetProperty;
+using android::base::SetProperty;
 
-void property_override(const std::string& name, const std::string& value)
-{
-    size_t valuelen = value.size();
+void property_override(const std::string &name, const std::string &value) {
+  size_t valuelen = value.size();
 
-    prop_info* pi = (prop_info*) __system_property_find(name.c_str());
-    if (pi != nullptr) {
-        __system_property_update(pi, value.c_str(), valuelen);
+  prop_info *pi = (prop_info *)__system_property_find(name.c_str());
+  if (pi != nullptr) {
+    __system_property_update(pi, value.c_str(), valuelen);
+  } else {
+    int rc = __system_property_add(name.c_str(), name.size(), value.c_str(), valuelen);
+    if (rc < 0) {
+      LOG(ERROR) << "property_set(\"" << name << "\", \"" << value << "\") failed: "
+                 << "__system_property_add failed";
     }
-    else {
-        int rc = __system_property_add(name.c_str(), name.size(), value.c_str(), valuelen);
-        if (rc < 0) {
-            LOG(ERROR) << "property_set(\"" << name << "\", \"" << value << "\") failed: "
-                       << "__system_property_add failed";
-        }
-    }
+  }
 }
 
-void model_property_override(const std::string& device, const std::string& name, const std::string& model) {
-	property_override("ro.build.product", device);
-	property_override("ro.product.device", device);
-	property_override("ro.product.odm.device", device);
-	property_override("ro.product.vendor.device", device);
-	property_override("ro.product.product.device", device);
-	property_override("ro.product.system_ext.device", device);
-	property_override("ro.product.system.device", device);
-	property_override("ro.product.bootimage.device", device);
-	property_override("ro.product.name", name);
-	property_override("ro.product.odm.name", name);
-	property_override("ro.product.vendor.name", name);
-	property_override("ro.product.product.name", name);
-	property_override("ro.product.system_ext.name", name);
-	property_override("ro.product.system.name", name);
-	property_override("ro.product.model", model);
-	property_override("ro.product.odm.model", model);
-	property_override("ro.product.vendor.model", model);
-	property_override("ro.product.product.model", model);
-	property_override("ro.product.system_ext.model", model);
-	property_override("ro.product.system.model", model);
+void model_property_override(const std::string &device, const std::string &name, const std::string &model) {
+  property_override("ro.build.product", device);
+  property_override("ro.product.device", device);
+  property_override("ro.product.odm.device", device);
+  property_override("ro.product.vendor.device", device);
+  property_override("ro.product.product.device", device);
+  property_override("ro.product.system_ext.device", device);
+  property_override("ro.product.system.device", device);
+  property_override("ro.product.bootimage.device", device);
+  property_override("ro.product.name", name);
+  property_override("ro.product.odm.name", name);
+  property_override("ro.product.vendor.name", name);
+  property_override("ro.product.product.name", name);
+  property_override("ro.product.system_ext.name", name);
+  property_override("ro.product.system.name", name);
+  property_override("ro.product.model", model);
+  property_override("ro.product.odm.model", model);
+  property_override("ro.product.vendor.model", model);
+  property_override("ro.product.product.model", model);
+  property_override("ro.product.system_ext.model", model);
+  property_override("ro.product.system.model", model);
 }
 
 void vendor_load_properties() {
-	property_override("ro.bootimage.build.date.utc", "1672502400");
-	property_override("ro.build.date.utc", "1672502400");
-	const std::string sku = GetProperty("ro.boot.hardware.sku", "");
-	if (sku == "dada") {
-		model_property_override("dada", "dada", "Xiaomi 15");
-    }
+  property_override("ro.bootimage.build.date.utc", "1672502400");
+  property_override("ro.build.date.utc", "1672502400");
+  const std::string sku = GetProperty("ro.boot.hardware.sku", "");
+
+  if (sku == "dada") {
+    model_property_override("dada", "dada", "Xiaomi 15");
+  } else if (sku == "haotian") {
+    model_property_override("haotian", "haotian", "Xiaomi 15 Pro");
+  } else {
+    LOG(ERROR) << "Unknown sku: " << sku;
+  }
 }

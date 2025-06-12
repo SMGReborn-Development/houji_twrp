@@ -1,7 +1,14 @@
+//
+// Copyright (C) 2024 The Android Open Source Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
 cc_library_static {
     name: "libinit_xiaomi_dada",
     header_libs: [
         "libbase_headers",
+        "libcutils_headers",
     ],
     cflags: [
         "-Wall",

@@ -10,13 +10,13 @@ DEVICE_PATH := device/xiaomi/dada
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
 
 # Release name
-PRODUCT_RELEASE_NAME := dada
+PRODUCT_RELEASE_NAME := haotian
 
 ## Device identifier
 PRODUCT_DEVICE := dada
-PRODUCT_NAME := twrp_dada
+PRODUCT_NAME := twrp_haotian
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Xiaomi 15
+PRODUCT_MODEL := Xiaomi 15 Pro
 PRODUCT_MANUFACTURER := Xiaomi
 
 # Assert

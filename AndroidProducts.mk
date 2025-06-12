@@ -5,4 +5,5 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_dada.mk
+    $(LOCAL_DIR)/twrp_dada.mk \
+    $(LOCAL_DIR)/twrp_haotian.mk
