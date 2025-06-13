@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-DEVICE_PATH := device/xiaomi/dada
+DEVICE_PATH := device/xiaomi/sm8750
 
 # Inherit from device.mk configuration
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -13,7 +13,7 @@ $(call inherit-product, $(DEVICE_PATH)/device.mk)
 PRODUCT_RELEASE_NAME := dada
 
 ## Device identifier
-PRODUCT_DEVICE := dada
+PRODUCT_DEVICE := sm8750
 PRODUCT_NAME := twrp_dada
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi 15
