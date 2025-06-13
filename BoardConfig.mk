@@ -101,7 +101,6 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_dada
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # TWRP specific build flags
-TW_RELEASE_DEVICE_NAME := $(PRODUCT_RELEASE_NAME)
 TW_RELEASE_PRODUCT_NAME := $(subst $(space),_,$(PRODUCT_MODEL))
 
 # Extras
@@ -162,7 +161,6 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_MAX_BRIGHTNESS := 2047
 TW_EXTRA_LANGUAGES := true
-#TW_DEFAULT_LANGUAGE := zh_CN
 TW_DEFAULT_BRIGHTNESS := 250
 TW_EXCLUDE_APEX := true
 TW_HAS_EDL_MODE := false
