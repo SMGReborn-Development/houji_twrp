@@ -1,10 +1,7 @@
 # TWRP device tree for Xiaomi SM8750
 
 ## Features
-Not works:
-- [ ] Decryption
-
-Works:
+- [X] Decryption
 - [X] ADB
 - [X] Display
 - [X] Fasbootd
