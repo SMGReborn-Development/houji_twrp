@@ -88,3 +88,6 @@ service vibratorfeature-hal-service /vendor/bin/hw/vendor.xiaomi.hardware.vibrat
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/sbin:/odm/lib64
     disabled
     seclabel u:r:recovery:s0
+
+on property:sys.boot_completed=1
+    setprop vendor.haptic.calibrate.done 1

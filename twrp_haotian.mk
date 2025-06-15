@@ -29,3 +29,14 @@ TW_H_OFFSET := -116
 
 # SPR
 PRODUCT_PROPERTY_OVERRIDES += vendor.display.enable_spr=1
+
+# Vibrator
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.odm.mm.vibrator.audio_haptic_support=true \
+	ro.odm.mm.vibrator.cirrus=true \
+	ro.odm.mm.vibrator.device_type=agm \
+	ro.odm.mm.vibrator.lowPowerMode=true \
+	ro.odm.mm.vibrator.resonant_frequency=130 \
+	ro.odm.mm.vibrator.slide_effect_protect_time=20 \
+	ro.odm.mm.vibrator.sys_path=/sys/bus/i2c/drivers/cs40l26/0-0043 \
+	ro.vendor.mm.vibrator.sys_path=/sys/class/qcom-haptics
