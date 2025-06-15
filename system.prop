@@ -8,6 +8,3 @@ vendor.gatekeeper.is_security_level_spu=0
 
 # Battery Property
 ro.charger.enable_suspend=1
-
-# Boot Completed
-sys.boot_completed=1
