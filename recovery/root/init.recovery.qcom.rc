@@ -48,8 +48,6 @@ on fs
 
 on boot
     setprop sys.usb.config adb
-    start vibratorfeature-hal-service
-    start touch_report
 
 on property:twrp.modules.loaded=true
     # Mount debugfs
@@ -71,13 +69,4 @@ on property:twrp.modules.loaded=true
     umount /firmware
 
 on property:hwservicemanager.ready=true
-    start vendor.qseecomd
-    start vendor.keymint-qti
     setprop sys.boot_completed 1
-
-on property:vendor.sys.listeners.registered=true && property:twrp.action_complete=0
-    start vendor.gatekeeper_default
-    start vendor.weaver_hal_service
-    start vendor.secure_element
-    start vendor.se_omapi
-    start vendor.keymint-strongbox

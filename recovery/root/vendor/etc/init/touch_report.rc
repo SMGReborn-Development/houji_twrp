@@ -1,3 +1,6 @@
+on init
+    start touch_report
+
 on charger
     write /sys/class/touch/touch_dev/touch_doze_analysis 6
 
@@ -10,4 +13,3 @@ service touch_report /vendor/bin/touch_report
     setenv LD_LIBRARY_PATH /vendor/lib64:/vendor/lib64/hw:/system/lib64:/sbin:/odm/lib64
     disabled
     seclabel u:r:recovery:s0
-    
