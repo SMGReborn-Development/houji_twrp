@@ -12,10 +12,9 @@
 /vendor_dlkm           auto    vendor_dlkm                                                        flags=display="Vendor_dlkm"
 /mi_ext                auto    mi_ext                                                             flags=display="Mi_ext"
 
-# Metadata/Cache/Cust Properties
+# Metadata/Cache Properties
 /metadata              f2fs    /dev/block/bootdevice/by-name/metadata                             flags=display="Metadata";backup=1;wrappedkey
 /cache                 auto    /dev/block/bootdevice/by-name/rescue                               flags=display="Cache";backup=1;wipeingui;wipeduringfactoryreset
-/cust                  auto    /dev/block/bootdevice/by-name/cust                                 flags=display="Cust";backup=1;flashimg=1
 
 # Boot Properties
 /boot                  emmc    /dev/block/bootdevice/by-name/boot                                 flags=display="Voot";backup=1;slotselect;flashimg=1
