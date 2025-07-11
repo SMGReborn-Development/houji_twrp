@@ -15,4 +15,4 @@
 - [X] Vibrator
 
 ## Build it yourself
-* [YuKongA/platform_manifest_twrp_aosp](https://github.com/YuKongA/platform_manifest_twrp_aosp)
+* [TWRP-Test/platform_manifest_twrp_aosp](https://github.com/TWRP-Test/platform_manifest_twrp_aosp)
