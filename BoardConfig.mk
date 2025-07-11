@@ -96,7 +96,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Init
-$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_xiaomi_sm8750)
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_sm8750
 TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_sm8750
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
