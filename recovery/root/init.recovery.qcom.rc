@@ -54,8 +54,6 @@ on property:twrp.modules.loaded=true
     # Mount firmware
     mkdir /firmware
     mount vfat /dev/block/bootdevice/by-name/modem${ro.boot.slot_suffix} /firmware ro
-    # Chmod /dev/st54spi_gpio
-    chmod 0777 /dev/st54spi_gpio
     # Load ADSP firmware for PMIC
     wait /sys/kernel/boot_adsp/boot
     write /sys/kernel/boot_adsp/boot 1
@@ -66,5 +64,5 @@ on property:twrp.modules.loaded=true
 on property:ro.crypto.state=encrypted && property:ro.boot.dynamic_partitions=true
     start prepdecrypt.vendor
 
-on property:hwservicemanager.ready=true
+on property:servicemanager.ready=true
     setprop sys.boot_completed 1

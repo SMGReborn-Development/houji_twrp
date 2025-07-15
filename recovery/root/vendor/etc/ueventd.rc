@@ -61,12 +61,13 @@
 
 #Import rc file
 import /vendor/etc/ueventd.qcom.userdebug.rc
+import /vendor/etc/fw_dir.ueventd.qcom.rc
 
 
 # Firmware directory Path
 # Below macro will be read by uevent and path will
 # be added to search path for firmware loading
-firmware_directories /vendor/firmware_mnt/image/ /vendor/modem_firmware/image/
+# firmware_directories /vendor/firmware_mnt/image/ /vendor/modem_firmware/image/
 
 subsystem dma_heap
     devname uevent_devpath
@@ -473,6 +474,8 @@ subsystem mem_buf_vm
 #Haptics class devices
 /sys/class/qcom-haptics    visense_enabled     0400    system    system
 /sys/class/qcom-haptics    primitive_duration  0600    system    system
+/sys/class/qcom-haptics    v_gain_error        0640    system    audio
+/sys/class/qcom-haptics    i_gain_error        0640    system    audio
 
 # NPU device
 /dev/msm_npu             0644   system     system
