@@ -25,7 +25,6 @@
 # AVB partitions
 /vbmeta                emmc    /dev/block/bootdevice/by-name/vbmeta                               display="VBMeta";flags=backup=1;slotselect;flashimg=1
 /vbmeta_system         emmc    /dev/block/bootdevice/by-name/vbmeta_system                        display="VBMeta System";flags=backup=1;slotselect;flashimg=1
-/vbmeta_vendor         emmc    /dev/block/bootdevice/by-name/vbmeta_vendor                        display="VBMeta Vendor";flags=backup=1;slotselect;flashimg=1
 
 # Persistent Properties
 /persist               ext4    /dev/block/bootdevice/by-name/persist                              flags=display="Persist"
