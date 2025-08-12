@@ -1,8 +1,5 @@
 # TWRP device tree for Xiaomi SM8750
 
-## Not working
-- [ ] USB OTG
-
 ## Features
 
 - [X] ADB
@@ -12,6 +9,7 @@
 - [X] Flashing
 - [X] MTP
 - [X] Sideload
+- [X] USB-OTG
 - [X] Vibrator
 
 ## Build it yourself
