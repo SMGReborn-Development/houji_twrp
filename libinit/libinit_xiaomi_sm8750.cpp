@@ -84,10 +84,6 @@ void vendor_load_properties() {
 
   if (sku == "dada") {
     model_property_override("dada", "dada", "Xiaomi 15");
-  } else if (sku == "haotian") {
-    model_property_override("haotian", "haotian", "Xiaomi 15 Pro");
-  } else if (sku == "xuanyuan") {
-    model_property_override("xuanyuan", "xuanyuan", "Xiaomi 15 Ultra");
   } else {
     LOG(ERROR) << "Unknown sku: " << sku;
   }
