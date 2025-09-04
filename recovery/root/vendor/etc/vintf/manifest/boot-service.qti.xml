@@ -1,8 +1,4 @@
-<!--
-    Input:
-        hardware/qcom/bootctrl/aidl/boot-service.qti.xml
--->
-<manifest version="8.0" type="device">
+<manifest version="7.0" type="device">
     <hal format="aidl">
         <name>android.hardware.boot</name>
         <fqname>IBootControl/default</fqname>
