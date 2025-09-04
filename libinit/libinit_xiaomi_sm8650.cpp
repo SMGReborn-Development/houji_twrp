@@ -82,8 +82,8 @@ void vendor_load_properties() {
   property_override("ro.build.date.utc", "1672502400");
   const std::string sku = GetProperty("ro.boot.hardware.sku", "");
 
-  if (sku == "dada") {
-    model_property_override("dada", "dada", "Xiaomi 15");
+  if (sku == "houji") {
+    model_property_override("houji", "houji", "Xiaomi 14");
   } else {
     LOG(ERROR) << "Unknown sku: " << sku;
   }

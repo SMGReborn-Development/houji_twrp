@@ -31,9 +31,9 @@ TARGET_NO_BOOTLOADER := true
 TARGET_USES_UEFI := true
 
 # Platform
-TARGET_BOARD_PLATFORM := xiaomi_sm8750
+TARGET_BOARD_PLATFORM := xiaomi_sm8650
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno830
-QCOM_BOARD_PLATFORMS += xiaomi_sm8750
+QCOM_BOARD_PLATFORMS += xiaomi_sm8650
 
 # Kernel
 TARGET_KERNEL_ARCH            := arm64
@@ -96,8 +96,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_sm8750
-TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_sm8750
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_xiaomi_sm8650
+TARGET_RECOVERY_DEVICE_MODULES := libinit_xiaomi_sm8650
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # TWRP specific build flags
