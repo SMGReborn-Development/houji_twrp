@@ -1,0 +1,2 @@
+export OF_SCREEN_H=2400
+export OF_MAINTAINER="SMGReborn"
