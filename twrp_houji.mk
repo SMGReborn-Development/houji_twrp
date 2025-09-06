@@ -14,7 +14,7 @@ PRODUCT_RELEASE_NAME := houji
 
 ## Device identifier
 PRODUCT_DEVICE := sm8650
-PRODUCT_NAME := twrp_dada
+PRODUCT_NAME := twrp_houji
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Xiaomi 14
 PRODUCT_MANUFACTURER := Xiaomi
@@ -24,8 +24,6 @@ TARGET_OTA_ASSERT_DEVICE := $(PRODUCT_RELEASE_NAME)
 
 # Theme
 TW_STATUS_ICONS_ALIGN := center
-TW_Y_OFFSET := 111
-TW_H_OFFSET := -111
 
 # SPR
 PRODUCT_PROPERTY_OVERRIDES += vendor.display.enable_spr=1
