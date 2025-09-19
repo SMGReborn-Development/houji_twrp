@@ -99,7 +99,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # Crypto
 TW_INCLUDE_CRYPTO := true
@@ -154,7 +154,8 @@ TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/vibratorfeature"
 TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
 TW_USE_SERIALNO_PROPERTY_FOR_DEVICE_ID := true
 #TW_NO_SCREEN_BLANK := true
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules.load))
+BOOT_KERNEL_MODULES += "adsp_loader_dlkm.ko focaltech_touch.ko goodix_core.ko qti_battery_charger.ko xiaomi_touch.ko focaltech_3683g.ko goodix_ts.ko focaltech_touch.ko fts_spi.ko"
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := "adsp_loader_dlkm.ko focaltech_touch.ko goodix_core.ko qti_battery_charger.ko xiaomi_touch.ko focaltech_3683g.ko goodix_ts.ko focaltech_touch.ko fts_spi.ko"
 TW_LOAD_VENDOR_MODULES := "adsp_loader_dlkm.ko focaltech_touch.ko goodix_core.ko qti_battery_charger.ko xiaomi_touch.ko focaltech_3683g.ko goodix_ts.ko focaltech_touch.ko fts_spi.ko"
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone48/temp"
 TW_BATTERY_SYSFS_WAIT_SECONDS := 6
