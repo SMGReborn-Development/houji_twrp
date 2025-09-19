@@ -22,9 +22,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Configure twrp common.mk
 $(call inherit-product, vendor/twrp/config/common.mk)
 
+# Boot control
 PRODUCT_PACKAGES += \
-    bootctrl.xiaomi_sm8550.recovery \
-    android.hardware.boot@1.2-impl-qti.recovery
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
 
 # SHIPPING API
 PRODUCT_SHIPPING_API_LEVEL := 31
